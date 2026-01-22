@@ -6,6 +6,14 @@ Repository for packaged Codex skills used by NexPort teams.
 - `packages/` contains the distributable `.skill` files.
 - `SKILLS.md` lists the available skills and their purposes.
 
+## Example Prompts
+Use these prompts with Codex to discover and install skills:
+
+- "list installable skills"
+- "list installable skills and descriptions at https://github.com/NexPort-Solutions/nexport-skills/tree/main/packages"
+- "install the nexport-playwright-ui-test-patterns skill"
+- "install skills from https://github.com/NexPort-Solutions/nexport-skills/tree/main/packages"
+
 ## Updating Skills
 1. Package skills from their source directories.
 2. Copy the resulting `.skill` files into `packages/`.
