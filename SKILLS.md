@@ -23,8 +23,8 @@ This repo stores packaged Codex skills for NexPort workflows. Packages live unde
 | nexport-release-announcement | Release announcement authoring workflow | packages/nexport-release-announcement.skill |
 | nexport-scheduler-job-lifecycle | Scheduler job lifecycle patterns | packages/nexport-scheduler-job-lifecycle.skill |
 | nexport-test-logging-diagnostics | Test logging diagnostics and guidance | packages/nexport-test-logging-diagnostics.skill |
-| nexport-trx-parsing | TRX parsing and failure extraction workflow | packages/nexport-trx-parsing.skill |
-| nexport-ui-tests-runner | Playwright UI test runner workflow | packages/nexport-ui-tests-runner.skill |
+| nexport-trx-parsing | TRX parsing, failure extraction, and parser benchmarking | packages/nexport-trx-parsing.skill |
+| nexport-ui-tests-runner | Playwright UI test runner workflow (start/stop, logs, test runs) | packages/nexport-ui-tests-runner.skill |
 | nexport-tree-permission-queries | Tree-based permission query patterns | packages/nexport-tree-permission-queries.skill |
 | nexport-ui-tests-startup-troubleshooting | UI tests startup troubleshooting | packages/nexport-ui-tests-startup-troubleshooting.skill |
 | nexport-user-docs | End-user docs update workflow | packages/nexport-user-docs.skill |

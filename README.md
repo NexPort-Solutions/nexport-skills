@@ -12,6 +12,7 @@ Use these prompts with Codex to discover and install skills:
 - "list installable skills"
 - "list installable skills and descriptions at https://github.com/NexPort-Solutions/nexport-skills/tree/main/packages"
 - "install the nexport-playwright-ui-test-patterns skill"
+- "install the nexport-trx-parsing skill"
 - "install skills from https://github.com/NexPort-Solutions/nexport-skills/tree/main/packages"
 
 ## Updating Skills
