@@ -39,6 +39,7 @@ This repo stores packaged Codex skills for NexPort workflows. Packages live unde
 | nexport-user-docs | End-user docs update workflow | packages/nexport-user-docs.skill |
 | nexport-vocabulary-glossary-enforcement | Detect terminology drift and align wording to glossary | packages/nexport-vocabulary-glossary-enforcement.skill |
 | php-lint-checks | PHP syntax linting workflow (`php -l`) for changed files or selected paths | packages/php-lint-checks.skill |
+| qa-ready-to-testing | Move QA-ready FogBugz cases to Resolved (To Testing) with case notes | packages/qa-ready-to-testing.skill |
 | research-orchestration | Research orchestration across local context, docs MCP, and web sources | packages/research-orchestration.skill |
 | test-creation-lessons | Repo-specific test creation lessons and AAAA structure guidance | packages/test-creation-lessons.skill |
 
