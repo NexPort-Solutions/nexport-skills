@@ -3,7 +3,8 @@
 Repository for NexPort Codex skills, including packaged `.skill` bundles and a Claude Code marketplace layout.
 
 ## Contents
-- `.claude-plugin/marketplace.json` defines the marketplace metadata.
+- `.claude-plugin/marketplace.json` defines the canonical marketplace metadata for repo-based discovery.
+- `marketplace.json` mirrors the same metadata at repo root for file-path based marketplace add flows.
 - `plugins/nexport-skills/.claude-plugin/plugin.json` defines the installable plugin.
 - `plugins/nexport-skills/skills/` contains unpacked skill directories (`<skill>/SKILL.md`) for Claude marketplace indexing.
 - `packages/` contains the distributable `.skill` bundles.
