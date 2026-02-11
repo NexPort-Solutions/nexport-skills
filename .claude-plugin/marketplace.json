@@ -1,0 +1,31 @@
+{
+  "name": "nexport-skills-marketplace",
+  "owner": {
+    "name": "NexPort Solutions"
+  },
+  "metadata": {
+    "description": "NexPort-maintained Claude Code skill plugins",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "nexport-skills",
+      "source": "nexport-skills",
+      "description": "NexPort packaged skills for engineering, QA, docs, and ops workflows",
+      "version": "1.0.0",
+      "author": {
+        "name": "NexPort Solutions"
+      },
+      "license": "MIT",
+      "repository": "https://github.com/NexPort-Solutions/nexport-skills",
+      "keywords": [
+        "nexport",
+        "skills",
+        "qa",
+        "testing",
+        "workflow"
+      ]
+    }
+  ]
+}

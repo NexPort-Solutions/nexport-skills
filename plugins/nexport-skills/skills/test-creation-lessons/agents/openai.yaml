@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Creation Lessons"
+  short_description: "Tests guidance for node:test and payloads"
+  default_prompt: "Use this skill when creating tests in this repo. Follow AAAA structure, prefer node:test, avoid network calls, export pure helpers for payloads, and ensure the MCP server does not start on import."

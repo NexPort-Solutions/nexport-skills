@@ -1,0 +1,4 @@
+name: php-lint-checks
+display_name: PHP Lint Checks
+short_description: Run php -l on changed or specified PHP files.
+default_prompt: "Run PHP syntax checks using php -l for changed files or specified paths."

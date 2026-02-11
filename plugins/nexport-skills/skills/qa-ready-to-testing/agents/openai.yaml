@@ -1,0 +1,3 @@
+interface:
+  display_name: "FogBugz Ready to Testing"
+  short_description: "Resolve implementation cases to testing for QA handoff"

@@ -20,6 +20,7 @@ This repo stores packaged Codex skills for NexPort workflows. Packages live unde
 | nexport-localization-resources | Localization resource usage patterns | packages/nexport-localization-resources.skill |
 | nexport-logging-telemetry-audit | Logging, telemetry, and auditing guidance for NexPort | packages/nexport-logging-telemetry-audit.skill |
 | nexport-memory-hygiene | Quick Memory hygiene and update guidance | packages/nexport-memory-hygiene.skill |
+| nexport-nhibernate-aaaa-session-pattern | NHibernate AAAA session-boundary pattern for deterministic controller/service tests | packages/nexport-nhibernate-aaaa-session-pattern.skill |
 | nexport-nhibernate-session-guard | NHibernate session/transaction guard patterns | packages/nexport-nhibernate-session-guard.skill |
 | nexport-permission-entitlement-gate | Tenant feature entitlement gating patterns | packages/nexport-permission-entitlement-gate.skill |
 | nexport-playwright-ui-test-patterns | Playwright UI test patterns and personas | packages/nexport-playwright-ui-test-patterns.skill |
