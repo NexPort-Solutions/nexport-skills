@@ -8,6 +8,7 @@ This repo stores packaged Codex skills for NexPort workflows. Packages live unde
 | --- | --- | --- |
 | es-file-lookup | Use Everything CLI (es.exe) for file name/path lookups | packages/es-file-lookup.skill |
 | nexport-ajaxq-request-guarding | Prevent duplicate AJAX requests using ajaxq + beforeSend guards | packages/nexport-ajaxq-request-guarding.skill |
+| nexport-appsec-pre-commit-gate | Pre-commit app security review across .NET, Python, PHP, and Node.js (deps + code + secrets) | packages/nexport-appsec-pre-commit-gate.skill |
 | nexport-azure-pipeline-status | Azure DevOps pipeline status and run inspection | packages/nexport-azure-pipeline-status.skill |
 | nexport-ci-pipeline-hygiene | CI pipeline update and validation hygiene | packages/nexport-ci-pipeline-hygiene.skill |
 | nexport-cold-start | Cold start workflow (Quick Memory + epic discovery + docs anchoring) | packages/nexport-cold-start.skill |
