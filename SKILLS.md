@@ -29,6 +29,7 @@ This repo stores packaged Codex skills for NexPort workflows. Packages live unde
 | nexport-question-analytics-flow | Question analytics workflow guidance | packages/nexport-question-analytics-flow.skill |
 | nexport-release-announcement | Release announcement authoring workflow | packages/nexport-release-announcement.skill |
 | nexport-scheduler-job-lifecycle | Scheduler job lifecycle patterns | packages/nexport-scheduler-job-lifecycle.skill |
+| nexport-solr-aks-replication | Replicate NexPort Solr deployment on AKS using automation-first az/kubectl workflows | packages/nexport-solr-aks-replication.skill |
 | nexport-test-logging-diagnostics | Test logging diagnostics and guidance | packages/nexport-test-logging-diagnostics.skill |
 | nexport-trx-parsing | TRX parsing, failure extraction, and parser benchmarking | packages/nexport-trx-parsing.skill |
 | nexport-ui-tests-runner | Playwright UI test runner workflow (start/stop, logs, test runs) | packages/nexport-ui-tests-runner.skill |
