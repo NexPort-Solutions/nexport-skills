@@ -1,64 +1,36 @@
 # AGENTS.md
 
 ## Purpose
-This repository publishes NexPort skills in two forms:
-- Packaged bundles in `packages/*.skill`.
-- Claude marketplace plugin content in `plugins/nexport-skills/skills/*`.
-
-Keep both forms in sync.
+This repository publishes NexPort skills as packaged bundles in `packages/*.skill`.
 
 ## Repository Layout
 - `packages/`: distributable `.skill` archives.
-- `plugins/nexport-skills/skills/`: unpacked skills for Claude plugin indexing.
-- `.claude-plugin/marketplace.json`: canonical marketplace metadata.
-- `marketplace.json`: root mirror of the same marketplace metadata.
-- `plugins/nexport-skills/.claude-plugin/plugin.json`: plugin metadata.
 - `SKILLS.md`: catalog shown to users.
+- `skills.json`: machine-readable catalog for tooling.
+- `scripts/`: package build/validation/catalog scripts.
+- `templates/skill-template/`: starter template for new skills.
 
 ## Adding a New Skill
-1. Create/package the new skill as `packages/<skill-name>.skill`.
+1. Create/package the new skill as `packages/<skill-name>.skill` (prefer `.\scripts\build-skill.ps1`).
 2. Archive format requirement: the bundle must contain a top-level `<skill-name>/` folder with `SKILL.md` inside it.
-3. Update `SKILLS.md` with the new skill, purpose, and package path.
-4. Re-sync unpacked plugin skills (extract all `.skill` bundles):
+3. Package completeness requirement: include all files needed by the skill, including any referenced `scripts/`, `references/`, `assets/`, `templates/`, and other companion files.
+4. Update `SKILLS.md` with the new skill, purpose, and package path.
+5. Regenerate `skills.json` and `SKILLS.md` via `.\scripts\sync-catalog.ps1`.
 
-```powershell
-tar -xf packages/<skill-name>.skill -C plugins/nexport-skills/skills
-```
-
-For a full refresh, clear and re-extract all skills:
-
-```powershell
-Remove-Item -Recurse -Force plugins/nexport-skills/skills/*
-Get-ChildItem packages -Filter *.skill | ForEach-Object { tar -xf $_.FullName -C plugins/nexport-skills/skills }
-```
-
-5. Validate structure:
-- each directory under `plugins/nexport-skills/skills/` should contain `SKILL.md`.
-- no stray root file at `plugins/nexport-skills/skills/SKILL.md`.
-
-## Maintaining Marketplace Metadata
-- Update `.claude-plugin/marketplace.json` when plugin metadata changes.
-- Keep `marketplace.json` byte-for-byte identical to `.claude-plugin/marketplace.json`.
-- Keep `plugins/nexport-skills/.claude-plugin/plugin.json` version and description aligned with marketplace entries.
-
-Hash check:
-
-```powershell
-(Get-FileHash .claude-plugin/marketplace.json -Algorithm SHA256).Hash
-(Get-FileHash marketplace.json -Algorithm SHA256).Hash
-```
+## Package Completeness Validation
+- Do not publish a package that includes only `SKILL.md` when the skill references additional files.
+- Validate each packaged skill by extracting it and confirming referenced paths exist inside the package.
+- When `SKILL.md` references a relative file path, that same relative path must exist under the packaged `<skill-name>/` directory.
 
 ## Validation Checklist Before Commit
 - `SKILLS.md` reflects current packages.
-- package count equals extracted skill count.
-- marketplace canonical/mirror files match.
+- package filenames and catalog entries align.
+- each package contains `SKILL.md` plus all referenced companion files.
+- run `.\scripts\validate-packages.ps1` successfully.
+- run `.\scripts\check-package-size.ps1 -MaxSizeMB 5` successfully.
+- run `.\scripts\sync-catalog.ps1` and commit resulting catalog updates.
 - `git status --short` shows only intended changes.
 
 ## Publishing
-1. Commit all related catalog/package/plugin updates together.
+1. Commit all related catalog/package updates together.
 2. Push branch to `origin`.
-3. Optional local check if Claude CLI is installed:
-
-```bash
-claude plugin validate .
-```

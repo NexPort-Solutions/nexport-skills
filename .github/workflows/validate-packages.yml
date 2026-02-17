@@ -1,0 +1,32 @@
+name: Validate Packages
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate skill packages
+        shell: pwsh
+        run: ./scripts/validate-packages.ps1
+
+      - name: Check package size budget
+        shell: pwsh
+        run: ./scripts/check-package-size.ps1 -MaxSizeMB 5
+
+      - name: Sync catalog from packages
+        shell: pwsh
+        run: ./scripts/sync-catalog.ps1
+
+      - name: Ensure catalog files are up to date
+        shell: pwsh
+        run: |
+          git diff --exit-code -- SKILLS.md skills.json

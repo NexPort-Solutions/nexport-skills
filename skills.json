@@ -1,0 +1,232 @@
+[
+  {
+    "name": "es-file-lookup",
+    "description": "Use when the user asks to find or locate files by name or path on Windows (e.g., \"find file X\", \"where is Y\", \"search for *.csproj\"). Always use the Everything CLI (es.exe) instead of Get-ChildItem/dir/PowerShell recursion unless es.exe is missing or errors.",
+    "package": "packages/es-file-lookup.skill"
+  },
+  {
+    "name": "fast-file-io-selection",
+    "description": "Select the fastest file-reading method in PowerShell/.NET based on intent (raw bytes, full text, or streaming text). Use when performance matters, when comparing Get-Content vs .NET APIs, or when choosing file IO for large or medium files.",
+    "package": "packages/fast-file-io-selection.skill"
+  },
+  {
+    "name": "fortigate-change-window-runbook",
+    "description": "Execute FortiGate change windows with safe sequencing, explicit validation checkpoints, rollback triggers, and evidence logging for audit-ready operations.",
+    "package": "packages/fortigate-change-window-runbook.skill"
+  },
+  {
+    "name": "fortigate-log-evidence-normalizer",
+    "description": "Parse and normalize FortiGate/FortiCloud/FortiAnalyzer VPN log exports into evidence-ready summaries, including event distributions, success/failure patterns, and schema-gap checks required for control validation.",
+    "package": "packages/fortigate-log-evidence-normalizer.skill"
+  },
+  {
+    "name": "fortigate-plink-key-bootstrap",
+    "description": "Add or update FortiGate admin SSH public keys for PuTTY/plink, enable SSH on the correct FortiGate interface, and verify non-interactive key login with pinned host key fingerprints.",
+    "package": "packages/fortigate-plink-key-bootstrap.skill"
+  },
+  {
+    "name": "fortigate-vpn-hardening-execution",
+    "description": "Execute a phased FortiGate VPN hardening plan with feasibility gates, low-risk sequencing, validation checkpoints, rollback notes, and evidence collection for CMMC/SOC-aligned operations.",
+    "package": "packages/fortigate-vpn-hardening-execution.skill"
+  },
+  {
+    "name": "nexport-ajaxq-request-guarding",
+    "description": "NexPort skill: when and how to use ajaxq + beforeSend guards to prevent duplicate AJAX requests.",
+    "package": "packages/nexport-ajaxq-request-guarding.skill"
+  },
+  {
+    "name": "nexport-appsec-pre-commit-gate",
+    "description": "Run a multi-stack application security review on staged changes before commit (.NET, Python, PHP, Node.js), including dependency vulnerabilities, code scanning, and secrets checks.",
+    "package": "packages/nexport-appsec-pre-commit-gate.skill"
+  },
+  {
+    "name": "nexport-azure-pipeline-status",
+    "description": "Retrieve Azure DevOps pipeline status and troubleshoot failed runs using az devops CLI. Use when asked about pipeline status, failed builds, stage failures, or to inspect recent runs for the current repo’s project.",
+    "package": "packages/nexport-azure-pipeline-status.skill"
+  },
+  {
+    "name": "nexport-ci-pipeline-hygiene",
+    "description": "NexPort skill: nexport-ci-pipeline-hygiene.",
+    "package": "packages/nexport-ci-pipeline-hygiene.skill"
+  },
+  {
+    "name": "nexport-cold-start",
+    "description": "NexPort skill: cold start workflow (Quick Memory + epic discovery + docs anchoring).",
+    "package": "packages/nexport-cold-start.skill"
+  },
+  {
+    "name": "nexport-controller-test-patterns",
+    "description": "NexPort skill: nexport-controller-test-patterns.",
+    "package": "packages/nexport-controller-test-patterns.skill"
+  },
+  {
+    "name": "nexport-epic-shaping-decomposition",
+    "description": "NexPort skill: epic shaping and decomposition with roadmap composition + optional FogBugz epic and child cases.",
+    "package": "packages/nexport-epic-shaping-decomposition.skill"
+  },
+  {
+    "name": "nexport-fogbugz-ops",
+    "description": "NexPort skill: nexport-fogbugz-ops.",
+    "package": "packages/nexport-fogbugz-ops.skill"
+  },
+  {
+    "name": "nexport-kendo-grid-edit-patterns",
+    "description": "NexPort skill: nexport-kendo-grid-edit-patterns.",
+    "package": "packages/nexport-kendo-grid-edit-patterns.skill"
+  },
+  {
+    "name": "nexport-kendo-upgrade-runbook",
+    "description": "Runbook for upgrading Kendo UI/Telerik ASP.NET Core components in NexPort Campus (server-side NuGet + client-side JS/themes via zip assets), including version alignment, zip-first client assets, and required UiSmoke validation before commit.",
+    "package": "packages/nexport-kendo-upgrade-runbook.skill"
+  },
+  {
+    "name": "nexport-localization-resources",
+    "description": "NexPort skill: nexport-localization-resources.",
+    "package": "packages/nexport-localization-resources.skill"
+  },
+  {
+    "name": "nexport-logging-telemetry-audit",
+    "description": "Logging, telemetry, and auditing guidance for NexPort. Use when discussing logging config, Serilog/log4net usage, audit logs, app logs, telemetry events, observability dashboards, or deciding where to record a system/user event.",
+    "package": "packages/nexport-logging-telemetry-audit.skill"
+  },
+  {
+    "name": "nexport-memory-hygiene",
+    "description": "NexPort skill: nexport-memory-hygiene.",
+    "package": "packages/nexport-memory-hygiene.skill"
+  },
+  {
+    "name": "nexport-nhibernate-aaaa-session-pattern",
+    "description": "Apply the NexPort NHibernate AAAA session pattern for controller and service tests: fresh session/transaction per phase, explicit initial asserts, and deterministic multi-step flow setup.",
+    "package": "packages/nexport-nhibernate-aaaa-session-pattern.skill"
+  },
+  {
+    "name": "nexport-nhibernate-session-guard",
+    "description": "NexPort skill: nexport-nhibernate-session-guard.",
+    "package": "packages/nexport-nhibernate-session-guard.skill"
+  },
+  {
+    "name": "nexport-permission-entitlement-gate",
+    "description": "NexPort skill: nexport-permission-entitlement-gate.",
+    "package": "packages/nexport-permission-entitlement-gate.skill"
+  },
+  {
+    "name": "nexport-playwright-ui-test-patterns",
+    "description": "NexPort skill: Playwright UI test patterns, including UiTests personas and helper endpoints.",
+    "package": "packages/nexport-playwright-ui-test-patterns.skill"
+  },
+  {
+    "name": "nexport-proctoring-host-patterns",
+    "description": "NexPort skill: nexport-proctoring-host-patterns.",
+    "package": "packages/nexport-proctoring-host-patterns.skill"
+  },
+  {
+    "name": "nexport-question-analytics-flow",
+    "description": "NexPort skill: nexport-question-analytics-flow.",
+    "package": "packages/nexport-question-analytics-flow.skill"
+  },
+  {
+    "name": "nexport-release-announcement",
+    "description": "Create NexPort Campus release announcements in https://github.com/NexPort-Solutions/NexPort-Campus-Documentation, including drafting the release note, adding the file under getting-started/whats-new, and linking it in SUMMARY.md and getting-started/whats-new/README.md. Use for new releases based on FogBugz cases and deployment date.",
+    "package": "packages/nexport-release-announcement.skill"
+  },
+  {
+    "name": "nexport-scheduler-job-lifecycle",
+    "description": "NexPort skill: nexport-scheduler-job-lifecycle.",
+    "package": "packages/nexport-scheduler-job-lifecycle.skill"
+  },
+  {
+    "name": "nexport-smoke-test-runner",
+    "description": "Run NexPort smoke tests with a consistent prompt that always asks whether UI or unit smoke tests are desired; prefers Roslyn MCP StartTest/TestSolution when available and falls back to Windows dotnet.exe or CLI commands. Use when asked to run smoke tests, tag smoke tests, or validate a quick sanity pass.",
+    "package": "packages/nexport-smoke-test-runner.skill"
+  },
+  {
+    "name": "nexport-solr-aks-replication",
+    "description": "Replicate NexPort Solr deployment on AKS using automation-first az/kubectl workflows. AKS-only; no Tomcat path.",
+    "package": "packages/nexport-solr-aks-replication.skill"
+  },
+  {
+    "name": "nexport-test-logging-diagnostics",
+    "description": "NexPort skill: nexport-test-logging-diagnostics.",
+    "package": "packages/nexport-test-logging-diagnostics.skill"
+  },
+  {
+    "name": "nexport-tree-permission-queries",
+    "description": "NexPort skill: nexport-tree-permission-queries.",
+    "package": "packages/nexport-tree-permission-queries.skill"
+  },
+  {
+    "name": "nexport-trx-parsing",
+    "description": "Parse and summarize TRX test results, extract failures fast, and benchmark TRX parsers (pygixml/ElementTree/xunitparserx/rg). Use when asked to analyze large TRX outputs or compare parsing speed/correctness.",
+    "package": "packages/nexport-trx-parsing.skill"
+  },
+  {
+    "name": "nexport-ui-fixtures-my-courses",
+    "description": "UiTests fixtures for My Courses/My Training coverage (seeding data, login-as, selectors, and common pitfalls).",
+    "package": "packages/nexport-ui-fixtures-my-courses.skill"
+  },
+  {
+    "name": "nexport-ui-tests-runner",
+    "description": "Run NexPort Playwright UI tests end-to-end (start/stop site, build, run tests, check logs). Use when asked to run UiTests/Playwright tests, start a UiTests site for tests, or troubleshoot UI test timeouts (always review logs first). Prefer roslyn_code_navigator build/start/test; fall back to Windows dotnet.exe when needed.",
+    "package": "packages/nexport-ui-tests-runner.skill"
+  },
+  {
+    "name": "nexport-ui-tests-startup-troubleshooting",
+    "description": "Start/stop and troubleshoot NexPort Playwright UI tests in UiTests env. Use when the app or UiTests endpoints return 404/503, when persona login fails, or when dashboard tools never load during UI tests.",
+    "package": "packages/nexport-ui-tests-startup-troubleshooting.skill"
+  },
+  {
+    "name": "nexport-ui-ux-checklist-enforcer",
+    "description": "NexPort skill: review a change set against docs/ui-ux/checklist.md and produce a concrete pass/fail report with file-specific fixes.",
+    "package": "packages/nexport-ui-ux-checklist-enforcer.skill"
+  },
+  {
+    "name": "nexport-ui-visual-walkthrough",
+    "description": "Run a manual UI visual walkthrough/check. Build first with roslyn_code_navigator, start the site with roslyn_code_navigator StartAspNet, then validate pages/interactions with Playwright MCP when available.",
+    "package": "packages/nexport-ui-visual-walkthrough.skill"
+  },
+  {
+    "name": "nexport-user-docs",
+    "description": "Update NexPort Campus end user documentation in https://github.com/NexPort-Solutions/NexPort-Campus-Documentation, including release announcements, SUMMARY.md, and What's New. Use when asked to add/modify user docs or align docs with a NexPort Campus release branch; handles branch selection rules, scratch checkout, and optional branch mapping updates.",
+    "package": "packages/nexport-user-docs.skill"
+  },
+  {
+    "name": "nexport-vocabulary-glossary-enforcement",
+    "description": "NexPort skill: detect user-facing terminology drift and engineer-centric jargon; propose fixes and glossary updates aligned to docs/ui-ux/glossary.md.",
+    "package": "packages/nexport-vocabulary-glossary-enforcement.skill"
+  },
+  {
+    "name": "php-lint-checks",
+    "description": "PHP syntax linting helpers (php -l) and workflows for validating changed files or selected paths. Use when asked to verify PHP syntax, lint modified files, or add quick PHP lint scripts.",
+    "package": "packages/php-lint-checks.skill"
+  },
+  {
+    "name": "qa-ready-to-testing",
+    "description": "Use when a FogBugz case is ready for QA validation. Trigger on requests like \"ready for QA\", \"send to QA\", \"move to testing\", or \"resolve this case\". The required action is to set the case status to Resolved (To Testing), not Beta or Production.",
+    "package": "packages/qa-ready-to-testing.skill"
+  },
+  {
+    "name": "research-orchestration",
+    "description": "Research workflow for when a question requires investigation or validation. Use to coordinate local repo context + Quick Memory, Microsoft Learn docs MCP (for Microsoft/Azure topics), Context7 MCP (for programming libraries), and web searches for up-to-date or niche info.",
+    "package": "packages/research-orchestration.skill"
+  },
+  {
+    "name": "sensitive-artifact-scan",
+    "description": "Scan project artifacts for sensitive material (for example keys, PSKs, tokens, secrets) and produce remediation actions such as redaction, rotation, and storage-control follow-ups.",
+    "package": "packages/sensitive-artifact-scan.skill"
+  },
+  {
+    "name": "sysops-project-kickoff",
+    "description": "End-to-end workflow for SysOps projects/cases (kickoff, planning, execution, validation, progress updates). Use for starting or maintaining SysOps projects, updating plans/phases, tracking progress, or organizing case work across the full lifecycle.",
+    "package": "packages/sysops-project-kickoff.skill"
+  },
+  {
+    "name": "test-creation-lessons",
+    "description": "Repo-specific guidance for creating or updating tests in fogbugz-mcp. Use when the user asks to add tests, expand test coverage, or create new test cases; covers node:test setup, AAAA structure, and payload-focused tests that avoid starting the MCP server or calling FogBugz.",
+    "package": "packages/test-creation-lessons.skill"
+  },
+  {
+    "name": "windows-network-admin-preflight",
+    "description": "Validate and prepare a Windows admin workstation network path before infrastructure changes, including adapter selection, static IP/DNS setup, route/metric checks, and rollback-to-DHCP steps.",
+    "package": "packages/windows-network-admin-preflight.skill"
+  }
+]
