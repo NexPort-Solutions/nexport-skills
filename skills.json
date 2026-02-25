@@ -1,5 +1,35 @@
 [
   {
+    "name": "azure-appservice-domain-tls-redirect-ops",
+    "description": "Operate custom domains, TLS bindings, and host-based redirects on Azure App Service (Linux), including hostname inventory, cert gap detection, and nginx redirect validation.",
+    "package": "packages/azure-appservice-domain-tls-redirect-ops.skill"
+  },
+  {
+    "name": "azure-automation-setup",
+    "description": "Set up Azure Automation accounts, runbooks, schedules, and identity/RBAC for scheduled ops tasks; use for lessons learned and repeatable setup of Automation + Storage + DNS access.",
+    "package": "packages/azure-automation-setup.skill"
+  },
+  {
+    "name": "azure-cli-fastpath",
+    "description": "Speed up and de-flake Azure CLI (az) investigations with safe PowerShell wrappers for auth/subscription checks, JSON-first output, extension install avoidance of interactive prompts, resource ID resolution, and canonical JSON comparison. Use when you’re repeatedly running az queries or troubleshooting quoting/extension/MFA issues on Windows.",
+    "package": "packages/azure-cli-fastpath.skill"
+  },
+  {
+    "name": "azure-deploy-method-decision",
+    "description": "Decide whether to deploy by direct Azure Files share upload (hotfix path) or full CI/CD pipeline run. Use for App Service deployments where speed vs safety tradeoffs must be explicit.",
+    "package": "packages/azure-deploy-method-decision.skill"
+  },
+  {
+    "name": "azure-php-linux-appservice-ops",
+    "description": "Operational setup and troubleshooting for PHP on Azure App Service (Linux), including nginx docroot overrides, appCommandLine/startup scripts, Kudu vs runtime container differences, log collection (startup.log, az webapp log download), and PHP extension/deprecation issues (e.g., mcrypt on PHP 8.x). Use when deploying or debugging PHP apps on Azure App Service (Linux).",
+    "package": "packages/azure-php-linux-appservice-ops.skill"
+  },
+  {
+    "name": "azure-vm-to-app-service-migration",
+    "description": "Plan and execute migration of workloads from an Azure VM to Azure App Service. Use for VM-to-App-Service projects, migrations, modernization cases, or Tier 3 cases that require discovery, decision-making, staging, cutover, rollback, and stakeholder validation.",
+    "package": "packages/azure-vm-to-app-service-migration.skill"
+  },
+  {
     "name": "es-file-lookup",
     "description": "Use when the user asks to find or locate files by name or path on Windows (e.g., \"find file X\", \"where is Y\", \"search for *.csproj\"). Always use the Everything CLI (es.exe) instead of Get-ChildItem/dir/PowerShell recursion unless es.exe is missing or errors.",
     "package": "packages/es-file-lookup.skill"
@@ -133,6 +163,11 @@
     "name": "nexport-scheduler-job-lifecycle",
     "description": "NexPort skill: nexport-scheduler-job-lifecycle.",
     "package": "packages/nexport-scheduler-job-lifecycle.skill"
+  },
+  {
+    "name": "nexport-skill-packaging-assistant",
+    "description": "Package and maintain skills for E:\\Sandbox\\nexport-skills, including build, validation, catalog sync, and commit-ready checks.",
+    "package": "packages/nexport-skill-packaging-assistant.skill"
   },
   {
     "name": "nexport-smoke-test-runner",
