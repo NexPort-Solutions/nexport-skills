@@ -90,6 +90,11 @@
     "package": "packages/nexport-controller-test-patterns.skill"
   },
   {
+    "name": "nexport-durable-async-operations",
+    "description": "Design NexPort work that touches remote systems or long-running execution as durable async operations with durable state, rediscoverable monitoring, and policy-based failure handling.",
+    "package": "packages/nexport-durable-async-operations.skill"
+  },
+  {
     "name": "nexport-epic-shaping-decomposition",
     "description": "NexPort skill: epic shaping and decomposition with roadmap composition + optional FogBugz epic and child cases.",
     "package": "packages/nexport-epic-shaping-decomposition.skill"

@@ -24,6 +24,7 @@ This repo stores packaged Codex skills for NexPort workflows. Packages live unde
 | nexport-ci-pipeline-hygiene | NexPort skill: nexport-ci-pipeline-hygiene. | packages/nexport-ci-pipeline-hygiene.skill |
 | nexport-cold-start | NexPort skill: cold start workflow (Quick Memory + epic discovery + docs anchoring). | packages/nexport-cold-start.skill |
 | nexport-controller-test-patterns | NexPort skill: nexport-controller-test-patterns. | packages/nexport-controller-test-patterns.skill |
+| nexport-durable-async-operations | Design NexPort work that touches remote systems or long-running execution as durable async operations with durable state, rediscoverable monitoring, and policy-based failure handling. | packages/nexport-durable-async-operations.skill |
 | nexport-epic-shaping-decomposition | NexPort skill: epic shaping and decomposition with roadmap composition + optional FogBugz epic and child cases. | packages/nexport-epic-shaping-decomposition.skill |
 | nexport-fogbugz-ops | NexPort skill: nexport-fogbugz-ops. | packages/nexport-fogbugz-ops.skill |
 | nexport-kendo-grid-edit-patterns | NexPort skill: nexport-kendo-grid-edit-patterns. | packages/nexport-kendo-grid-edit-patterns.skill |
