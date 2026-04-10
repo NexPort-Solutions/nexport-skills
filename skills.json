@@ -30,6 +30,16 @@
     "package": "packages/azure-vm-to-app-service-migration.skill"
   },
   {
+    "name": "develop-web-game",
+    "description": "Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: implement small changes, run a Playwright-based test script with short input bursts and intentional pauses, inspect screenshots/text, and review console errors with render_game_to_text.",
+    "package": "packages/develop-web-game.skill"
+  },
+  {
+    "name": "doc",
+    "description": "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.",
+    "package": "packages/doc.skill"
+  },
+  {
     "name": "es-file-lookup",
     "description": "Use when the user asks to find or locate files by name or path on Windows (e.g., \"find file X\", \"where is Y\", \"search for *.csproj\"). Always use the Everything CLI (es.exe) instead of Get-ChildItem/dir/PowerShell recursion unless es.exe is missing or errors.",
     "package": "packages/es-file-lookup.skill"
@@ -60,14 +70,49 @@
     "package": "packages/fortigate-vpn-hardening-execution.skill"
   },
   {
+    "name": "mcp-git-npx-packaging-readiness",
+    "description": "Validate and harden an MCP package so it runs from git-based npx installs (bin/prepare/build/runtime compatibility).",
+    "package": "packages/mcp-git-npx-packaging-readiness.skill"
+  },
+  {
+    "name": "mcp-openapi-full-parity-server",
+    "description": "Build a full-capability MCP server from OpenAPI specs with deterministic tool naming, mutation safety gating, committed generation artifacts, and parity verification.",
+    "package": "packages/mcp-openapi-full-parity-server.skill"
+  },
+  {
+    "name": "mcp-tool-catalog-docgen",
+    "description": "Generate and maintain an MCP tool catalog from a manifest, including compatibility tools, workflow tools, examples, and safety contracts.",
+    "package": "packages/mcp-tool-catalog-docgen.skill"
+  },
+  {
+    "name": "nexport-accessibility-wcag-2-1-enforcer",
+    "description": "NexPort skill: enforce WCAG 2.1 AA expectations on new or changed UI, with concrete review criteria for forms, async feedback, overlays, focus behavior, and responsive flows.",
+    "package": "packages/nexport-accessibility-wcag-2-1-enforcer.skill"
+  },
+  {
     "name": "nexport-ajaxq-request-guarding",
     "description": "NexPort skill: when and how to use ajaxq + beforeSend guards to prevent duplicate AJAX requests.",
     "package": "packages/nexport-ajaxq-request-guarding.skill"
   },
   {
+    "name": "nexport-api-swagger-docs",
+    "description": "Add and validate Swagger-facing XML docs and example payloads for NexPort Web APIs.",
+    "package": "packages/nexport-api-swagger-docs.skill"
+  },
+  {
     "name": "nexport-appsec-pre-commit-gate",
     "description": "Run a multi-stack application security review on staged changes before commit (.NET, Python, PHP, Node.js), including dependency vulnerabilities, code scanning, and secrets checks.",
     "package": "packages/nexport-appsec-pre-commit-gate.skill"
+  },
+  {
+    "name": "nexport-azure-appservice-log-triage",
+    "description": "Diagnose Azure App Service startup and runtime failures by pulling Kudu, App Service, and application logs with Azure-authenticated workflows. Use when a deployment succeeds but the site is unhealthy, returning 5xx, or failing during startup.",
+    "package": "packages/nexport-azure-appservice-log-triage.skill"
+  },
+  {
+    "name": "nexport-azure-pipeline-compiler-validation",
+    "description": "Validate Azure Pipelines YAML with Azure DevOps' actual pipeline compiler and resource checks. Use when editing pipeline YAML, diagnosing template expansion or service-connection authorization failures, or verifying variable groups, service endpoints, and pipeline definitions before queueing runs.",
+    "package": "packages/nexport-azure-pipeline-compiler-validation.skill"
   },
   {
     "name": "nexport-azure-pipeline-status",
@@ -88,6 +133,11 @@
     "name": "nexport-controller-test-patterns",
     "description": "NexPort skill: nexport-controller-test-patterns.",
     "package": "packages/nexport-controller-test-patterns.skill"
+  },
+  {
+    "name": "nexport-doc-workstream-trigger",
+    "description": "NexPort skill: prevent missed user/admin documentation updates when roadmap cases complete; add/update documentation tasks with doc-case guidance.",
+    "package": "packages/nexport-doc-workstream-trigger.skill"
   },
   {
     "name": "nexport-durable-async-operations",
@@ -125,9 +175,19 @@
     "package": "packages/nexport-logging-telemetry-audit.skill"
   },
   {
+    "name": "nexport-managed-devops-pools-ops",
+    "description": "Provision, validate, authorize, and cut over NexPort Managed DevOps Pools safely.",
+    "package": "packages/nexport-managed-devops-pools-ops.skill"
+  },
+  {
     "name": "nexport-memory-hygiene",
     "description": "NexPort skill: nexport-memory-hygiene.",
     "package": "packages/nexport-memory-hygiene.skill"
+  },
+  {
+    "name": "nexport-migration-hardening",
+    "description": "Harden NexPort historical database migrations so they replay safely across mixed schema states. Use when a migration fails during deployment, when legacy table renames are involved, or when adding idempotent guards for tables, columns, and indexes.",
+    "package": "packages/nexport-migration-hardening.skill"
   },
   {
     "name": "nexport-nhibernate-aaaa-session-pattern",
@@ -155,6 +215,11 @@
     "package": "packages/nexport-proctoring-host-patterns.skill"
   },
   {
+    "name": "nexport-push-origin",
+    "description": "Push to origin with an explicit NexPort Campus pipeline trigger decision.",
+    "package": "packages/nexport-push-origin.skill"
+  },
+  {
     "name": "nexport-question-analytics-flow",
     "description": "NexPort skill: nexport-question-analytics-flow.",
     "package": "packages/nexport-question-analytics-flow.skill"
@@ -163,6 +228,11 @@
     "name": "nexport-release-announcement",
     "description": "Create NexPort Campus release announcements in https://github.com/NexPort-Solutions/NexPort-Campus-Documentation, including drafting the release note, adding the file under getting-started/whats-new, and linking it in SUMMARY.md and getting-started/whats-new/README.md. Use for new releases based on FogBugz cases and deployment date.",
     "package": "packages/nexport-release-announcement.skill"
+  },
+  {
+    "name": "nexport-roadmap-hygiene",
+    "description": "Keep roadmaps, plans, and task lists aligned with actual progress; prevent redundant churn by verifying status before starting work and updating status after completion.",
+    "package": "packages/nexport-roadmap-hygiene.skill"
   },
   {
     "name": "nexport-scheduler-job-lifecycle",
@@ -176,7 +246,7 @@
   },
   {
     "name": "nexport-smoke-test-runner",
-    "description": "Run NexPort smoke tests with a consistent prompt that always asks whether UI or unit smoke tests are desired; prefers Roslyn MCP StartTest/TestSolution when available and falls back to Windows dotnet.exe or CLI commands. Use when asked to run smoke tests, tag smoke tests, or validate a quick sanity pass.",
+    "description": "Run NexPort smoke tests with a consistent prompt that always asks whether UI or unit smoke tests are desired. In Linux terminals, Roslyn MCP StartTest/TestSolution is preferred; in PowerShell terminals, use native Windows dotnet tooling first.",
     "package": "packages/nexport-smoke-test-runner.skill"
   },
   {
@@ -185,9 +255,29 @@
     "package": "packages/nexport-solr-aks-replication.skill"
   },
   {
+    "name": "nexport-t4-resource-generation",
+    "description": "Run NexPort localization T4 templates explicitly and verify generated resource outputs are current.",
+    "package": "packages/nexport-t4-resource-generation.skill"
+  },
+  {
+    "name": "nexport-tenant-preview-simulation",
+    "description": "Implement strict tenant-view simulation toggles for internal workspace users (request-scoped preview, effective access resolver, preview UX cues, and required tests).",
+    "package": "packages/nexport-tenant-preview-simulation.skill"
+  },
+  {
+    "name": "nexport-test-db-restore-preflight",
+    "description": "Preflight NexPort.Tests database restore prerequisites before unit or integration test runs. Use when running NexPort.Tests locally, when SQL restore/setup fails, or when the repo is under a user-profile or Codex worktree path that SQL Server may not be able to read.",
+    "package": "packages/nexport-test-db-restore-preflight.skill"
+  },
+  {
     "name": "nexport-test-logging-diagnostics",
     "description": "NexPort skill: nexport-test-logging-diagnostics.",
     "package": "packages/nexport-test-logging-diagnostics.skill"
+  },
+  {
+    "name": "nexport-test-timeout-hardening",
+    "description": "Design and refactor NexPort tests to avoid hangs/timeouts in local and Azure shard runs. Use when tests hang, hit shard timeout, or require deterministic worker/session behavior.",
+    "package": "packages/nexport-test-timeout-hardening.skill"
   },
   {
     "name": "nexport-tree-permission-queries",
@@ -206,7 +296,7 @@
   },
   {
     "name": "nexport-ui-tests-runner",
-    "description": "Run NexPort Playwright UI tests end-to-end (start/stop site, build, run tests, check logs). Use when asked to run UiTests/Playwright tests, start a UiTests site for tests, or troubleshoot UI test timeouts (always review logs first). Prefer roslyn_code_navigator build/start/test; fall back to Windows dotnet.exe when needed.",
+    "description": "Run NexPort Playwright UI tests end-to-end (start/stop site, build, run tests, check logs). Use when asked to run UiTests/Playwright tests, start a UiTests site for tests, or troubleshoot UI test timeouts (always review logs first). In Linux terminals, Roslyn MCP is preferred for build/start/test; in PowerShell terminals, use native Windows dotnet tooling first.",
     "package": "packages/nexport-ui-tests-runner.skill"
   },
   {
@@ -221,7 +311,7 @@
   },
   {
     "name": "nexport-ui-visual-walkthrough",
-    "description": "Run a manual UI visual walkthrough/check. Build first with roslyn_code_navigator, start the site with roslyn_code_navigator StartAspNet, then validate pages/interactions with Playwright MCP when available.",
+    "description": "Run a manual UI visual walkthrough/check. In Linux terminals, build/start with roslyn_code_navigator first; in PowerShell terminals, use native Windows dotnet tooling first; then validate pages/interactions with Playwright MCP when available.",
     "package": "packages/nexport-ui-visual-walkthrough.skill"
   },
   {
@@ -233,6 +323,21 @@
     "name": "nexport-vocabulary-glossary-enforcement",
     "description": "NexPort skill: detect user-facing terminology drift and engineer-centric jargon; propose fixes and glossary updates aligned to docs/ui-ux/glossary.md.",
     "package": "packages/nexport-vocabulary-glossary-enforcement.skill"
+  },
+  {
+    "name": "nexport-web-host-preflight",
+    "description": "Preflight NexPort web-host startup for browser/UI work. Use before UiTests, Playwright, manual browser validation, or any task that depends on local HTTP/HTTPS hosting, certificates, launch profiles, and ignored appsettings files.",
+    "package": "packages/nexport-web-host-preflight.skill"
+  },
+  {
+    "name": "nexport-wordpress-blog-publisher",
+    "description": "Create or update NexPort Solutions blog posts on https://nexportsolutions.com using the WordPress REST API with Application Passwords. Use when publishing or revising Elementor-backed blog posts that use the Theme layout, when selecting categories and tags for NexPort announcements, or when generating a featured image for a website post with OpenAI image generation.",
+    "package": "packages/nexport-wordpress-blog-publisher.skill"
+  },
+  {
+    "name": "pdf",
+    "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+    "package": "packages/pdf.skill"
   },
   {
     "name": "php-lint-checks",
@@ -255,14 +360,24 @@
     "package": "packages/sensitive-artifact-scan.skill"
   },
   {
+    "name": "spreadsheet",
+    "description": "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) with formula-aware workflows, cached recalculation, and visual review.",
+    "package": "packages/spreadsheet.skill"
+  },
+  {
     "name": "sysops-project-kickoff",
     "description": "End-to-end workflow for SysOps projects/cases (kickoff, planning, execution, validation, progress updates). Use for starting or maintaining SysOps projects, updating plans/phases, tracking progress, or organizing case work across the full lifecycle.",
     "package": "packages/sysops-project-kickoff.skill"
   },
   {
     "name": "test-creation-lessons",
-    "description": "Repo-specific guidance for creating or updating tests in fogbugz-mcp. Use when the user asks to add tests, expand test coverage, or create new test cases; covers node:test setup, AAAA structure, and payload-focused tests that avoid starting the MCP server or calling FogBugz.",
+    "description": "Repo-specific guidance for creating or updating tests in fogbugz-mcp and similar MCP TypeScript repos. Use when adding coverage for payload shaping, envelope contracts, safety gates, or workflow tools without network calls.",
     "package": "packages/test-creation-lessons.skill"
+  },
+  {
+    "name": "update-progress",
+    "description": "Sync completed session work into durable progress artifacts. Use when asked to update progress, capture session progress, wrap up a session, write a stakeholder update, post a case update, sync status, create a handoff note, sync roadmap or plan checkboxes, create a quick-memory progress note, or post a progress report to the active FogBugz case, GitHub issue, or related tracker.",
+    "package": "packages/update-progress.skill"
   },
   {
     "name": "windows-network-admin-preflight",
