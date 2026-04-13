@@ -155,6 +155,11 @@
     "package": "packages/nexport-fogbugz-ops.skill"
   },
   {
+    "name": "nexport-hosted-qa-migration",
+    "description": "NexPort hosted QA migration playbook for nexport-qa2. Use when migrating legacy Playwright coverage or docs to the minimal hosted QA contract (`baseUrl`, `orgShortName`, `credentials.admin`, `credentials.sysops`), replacing feature-specific config with arrange helpers and durable fixtures, or validating hosted QA behavior against beta or local.",
+    "package": "packages/nexport-hosted-qa-migration.skill"
+  },
+  {
     "name": "nexport-kendo-grid-edit-patterns",
     "description": "NexPort skill: nexport-kendo-grid-edit-patterns.",
     "package": "packages/nexport-kendo-grid-edit-patterns.skill"
@@ -206,7 +211,7 @@
   },
   {
     "name": "nexport-playwright-ui-test-patterns",
-    "description": "NexPort skill: Playwright UI test patterns, including UiTests personas and helper endpoints.",
+    "description": "NexPort Playwright UI testing patterns for both legacy UiTests localhost runs and hosted QA migration work. Use when adding or debugging Playwright tests, choosing between `/UiTests/*` helpers and repo-owned provisioning, stabilizing auth and navigation, or collecting evidence for UI regressions.",
     "package": "packages/nexport-playwright-ui-test-patterns.skill"
   },
   {
@@ -221,7 +226,7 @@
   },
   {
     "name": "nexport-question-analytics-flow",
-    "description": "NexPort skill: nexport-question-analytics-flow.",
+    "description": "NexPort Question Analytics implementation and test guidance. Use when changing Question Analytics filters, selector/apply behavior, entitlement or permission gating, or Playwright provisioning for org, question bank, and managed question fixtures, especially in nexport-qa2 hosted QA migration work.",
     "package": "packages/nexport-question-analytics-flow.skill"
   },
   {
