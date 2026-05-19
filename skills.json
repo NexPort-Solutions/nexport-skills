@@ -70,6 +70,11 @@
     "package": "packages/fortigate-vpn-hardening-execution.skill"
   },
   {
+    "name": "markdown-quality",
+    "description": "Run repo-local Markdown quality checks with markdownlint-cli2 and Prettier after creating or editing Markdown, especially tables, task lists, links, headings, or CMMC evidence docs.",
+    "package": "packages/markdown-quality.skill"
+  },
+  {
     "name": "mcp-git-npx-packaging-readiness",
     "description": "Validate and harden an MCP package so it runs from git-based npx installs (bin/prepare/build/runtime compatibility).",
     "package": "packages/mcp-git-npx-packaging-readiness.skill"
